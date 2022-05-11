@@ -59,9 +59,9 @@ contract RRC is SafeMath{
 
     /* Initializes contract with initial supply tokens to the creator of the contract */
     function RRC(
-        uint256 initialSupply;
-        string tokenName;
-        string tokenSymbol;
+        uint256 initialSupply,
+        string tokenName,
+        string tokenSymbol,
         address holder) public {
             totalSupply = initialSupply * 10 ** uint256(decimals); // Update total supply
             balanceOf[holder] = totalSupply;                       // Give the creator all initial tokens
